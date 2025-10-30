@@ -1,0 +1,203 @@
+{
+  "name": "ApiNose",
+  "version": "1",
+  "items": [
+    {
+      "type": "folder",
+      "name": "Users",
+      "filename": "Users",
+      "seq": 1,
+      "root": {
+        "request": {
+          "auth": {
+            "mode": "inherit"
+          }
+        },
+        "meta": {
+          "name": "Users",
+          "seq": 1
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "Find all users",
+          "filename": "Find all users.bru",
+          "seq": 1,
+          "settings": {
+            "encodeUrl": true
+          },
+          "tags": [],
+          "request": {
+            "url": "http://localhost:9000/api/v1/users",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Update User Information",
+          "filename": "Update User Information.bru",
+          "seq": 2,
+          "settings": {
+            "encodeUrl": true
+          },
+          "tags": [],
+          "request": {
+            "url": "http://localhost:9000/api/v1/users/:id",
+            "method": "PUT",
+            "headers": [],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "enabled": true
+              }
+            ],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"idType\": {\n    \"id\": \"00000000-0000-0000-0000-000000000000\"\n  },\n  \"idNumber\": \"\",\n  \"firstName\": \"\",\n  \"secondName\": \"\",\n  \"firstSurname\": \"\",\n  \"secondSurname\": \"\",\n  \"homeCity\": {\n    \"id\": \"00000000-0000-0000-0000-000000000000\"\n  },\n  \"email\": \"\",\n  \"mobileNumber\": \"\",\n  \"emailConfirmed\": false,\n  \"mobileNumberConfirmed\": false\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Register New User Information",
+          "filename": "Register New User Information.bru",
+          "seq": 3,
+          "settings": {
+            "encodeUrl": true
+          },
+          "tags": [],
+          "request": {
+            "url": "http://localhost:9000/api/v1/users",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Drop User Information",
+          "filename": "Drop User Information.bru",
+          "seq": 4,
+          "settings": {
+            "encodeUrl": true
+          },
+          "tags": [],
+          "request": {
+            "url": "http://localhost:9000/api/v1/users/:id",
+            "method": "DELETE",
+            "headers": [],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "enabled": true
+              }
+            ],
+            "body": {
+              "mode": "json",
+              "json": "",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Get Dummy UserDTO",
+          "filename": "Get Dummy UserDTO.bru",
+          "seq": 5,
+          "settings": {
+            "encodeUrl": true
+          },
+          "tags": [],
+          "request": {
+            "url": "http://localhost:9000/api/v1/users/dummy",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "ApiNose",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0,
+    "filesCount": 0
+  }
+}
