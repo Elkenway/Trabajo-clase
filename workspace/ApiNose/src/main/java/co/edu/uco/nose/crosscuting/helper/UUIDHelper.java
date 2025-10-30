@@ -30,4 +30,13 @@ public class UUIDHelper {
 
 	}
 
+	public Object generateNewUUID() {
+		return null;
+	}
+
+	public boolean isDefaultUUID(UUID id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

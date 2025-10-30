@@ -22,5 +22,10 @@ public class TextHelper {
 	public static String getDefault() {
 	    return getDefault();
 	}
+
+	public static boolean isEmptyWithTrim(String message) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 }
